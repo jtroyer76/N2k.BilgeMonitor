@@ -10,7 +10,7 @@ Hat Labs SH-ESP32 reading the bilge pump's power through the opto-isolated input
 
 | # | Problem | Where |
 |---|---|---|
-| 1 | Not reporting — no `environment.bilge.*` on the SignalK server (nootcore, 2026-10-27) | deployment |
+| 1 | Not installed yet (as of 2026-10-27) — install after the fixes below | deployment |
 | 2 | Input polarity unverified. Code treats HIGH = pump running; an opto input often reads LOW when energized. If inverted: state is backwards, count increments on stop, duration measures idle time | `main.cpp:67` |
 | 3 | A continuously running pump (leak, stuck float) is invisible — duration only reported after the pump stops | `main.cpp:73-84` |
 | 4 | No alerts — nothing reaches `notifications.*` | — |
